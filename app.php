@@ -1,11 +1,67 @@
 <?php
 
+//**************
+//to field validation
+//******************
+if(isset($_GET["to"])){
+	
+	
+	
+	if(empty($_GET["to"])){
+		//it is empty
+		echo "Please enter the recipient!";
+		
+		}else{
+			//its not empty
+		echo "to: ".$_GET["to"]."<br>";
+	}
+}
+
+
+if(isset($_GET["from"])){
+	
+	
+	
+	if(empty($_GET["from"])){
+		//it is empty
+		echo "Please enter the recipient!";
+		
+		}else{
+			//its not empty
+		echo "from: ".$_GET["from"]."<br>";
+	}
+}
+
+//check if there is variable in the URL
+if(isset($_GET["message"])){
+	
+	//only if there is message in the URL
+	//echo "there is a message";
+	
+	if(empty($_GET["message"])){
+		//it is empty
+		echo "Please enter the message!";
+		
+		}else{
+			//its not empty
+		echo "Message: ".$_GET["message"]."<br>";
+	}
+	
+	
+}
+
+
+	
+
+
+
 //Getting the message from address
 
 $my_message = $_GET["message"];
 $to = $_GET["to"];
+$from = $_GET["from"];
 
-echo "My message is ".$my_message;" and is to ".$to; " and is to ".$from;
+//echo "My message is ".$my_message." and is to ".$to." and is from ".$from;
 
 
 
